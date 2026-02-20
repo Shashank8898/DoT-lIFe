@@ -1,0 +1,25 @@
+# Virtual environment
+myenv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# PyInstaller
+build/
+dist/
+*.spec
+
+# VS Code
+.vscode/
+
+# Linux desktop file (if personal only)
+*.desktop
+
+# OS files
+.DS_Store
+Thumbs.db
