@@ -95,7 +95,7 @@ if (!process.env.ENCRYPTED_KEY) {
 //  PASSWORD REQUIRED 
 const password = process.argv[3]
 if (!password) {
-  console.log("🔐 Password required")
+  console.log(" Password required")
   process.exit(1)
 }
 
