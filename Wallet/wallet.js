@@ -81,14 +81,14 @@ if (command === "create") {
     `ENCRYPTED_KEY=${encryptedKey}\nRPC_URL=${process.env.RPC_URL || ""}`
   )
 
-  console.log("✅ Wallet Created")
+  console.log("Wallet Created")
   console.log("Address:", account.address)
   process.exit(0)
 }
 
 // Wallet Checkin
 if (!process.env.ENCRYPTED_KEY) {
-  console.log("❌ No wallet found. Run: node wallet.js create <password>")
+  console.log(" No wallet found. Run: node wallet.js create <password>")
   process.exit(1)
 }
 
@@ -103,7 +103,7 @@ let privateKey
 try {
   privateKey = decrypt(process.env.ENCRYPTED_KEY, password)
 } catch (err) {
-  console.log("❌ Wrong password")
+  console.log(" Wrong password")
   process.exit(1)
 }
 
@@ -122,7 +122,7 @@ const walletClient = createWalletClient({
 
 //  ADDRESS 
 if (command === "address") {
-  console.log("📍 Address:", account.address)
+  console.log(" Address:", account.address)
 }
 
 //  BALANCE 
@@ -131,7 +131,7 @@ if (command === "balance") {
     address: account.address
   })
 
-  console.log("💰 Balance:", formatEther(balance), "ETH")
+  console.log(" Balance:", formatEther(balance), "ETH")
 }
 
 //  SEND 
@@ -149,7 +149,7 @@ if (command === "send") {
     value: parseEther(amount)
   })
 
-  console.log("🚀 Transaction Sent")
+  console.log("Transaction Sent")
   console.log("Tx Hash:", hash)
 }
 
