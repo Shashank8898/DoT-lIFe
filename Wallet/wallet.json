@@ -1,0 +1,14 @@
+{
+  "wallets": [
+    {
+      "name": "main",
+      "address": "0x123...",
+      "encryptedKey": "iv:encrypteddata"
+    },
+    {
+      "name": "trading",
+      "address": "0xabc...",
+      "encryptedKey": "iv:encrypteddata"
+    }
+  ]
+}
